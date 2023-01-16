@@ -1,4 +1,4 @@
-## Create the Springboot project usng :
+## Create the Springboot project using :
 https://start.spring.io/
 
 ## Build the project using command :
@@ -6,7 +6,7 @@ https://start.spring.io/
 mvn clean install
 ...
 
-## Run the applictation using command :
+## Run the application using command :
 ...
 mvn spring-boot:run
 ...
