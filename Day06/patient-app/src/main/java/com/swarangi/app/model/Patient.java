@@ -24,6 +24,7 @@ public class Patient {
         this.disease=disease;
 
     }
+
     public String getId(){return id;}
     public String getName(){return name;}
     public String getAge(){return age;}

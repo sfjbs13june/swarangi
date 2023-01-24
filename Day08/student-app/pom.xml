@@ -9,12 +9,13 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.swarangi.app</groupId>
-	<artifactId>patient-app</artifactId>
+	<artifactId>student-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>patient-app</name>
-	<description>Demo project for Spring Boot</description>
+	<name>student-app</name>
+	<description>Student Application</description>
 	<properties>
 		<java.version>11</java.version>
+		<docker.image.prefix>swarangikulkarni07</docker.image.prefix>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -27,16 +28,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.2</version>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -45,7 +36,20 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.6</version>
+				<configuration>
+					<repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+					<tag>${project.version}</tag>
+				</configuration>
+			</plugin>
 		</plugins>
+
 	</build>
 
 </project>
