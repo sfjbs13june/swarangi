@@ -1,0 +1,7 @@
+package com.swarangi.app.exception;
+
+public class NameNotFoundException extends Exception{
+    public NameNotFoundException(String message){
+        super(message);
+    }
+}
