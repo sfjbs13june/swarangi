@@ -18,7 +18,7 @@ public class PatientController
     public Patient savePatient(@RequestBody Patient patient) throws PatientNotFoundException, NameNotFoundException, AgeNotFoundException, GenderNotFoundException, DiseaseNotFoundException {
         if(patient.getId()==null)
         {
-            throw new PatientNotFoundException("There is no patient available");
+            throw new PatientNotFoundException("There is no patient available.");
         }
         if(patient.getName()==null)
         {
@@ -30,7 +30,7 @@ public class PatientController
         }
         if(patient.getGender()==null)
         {
-            throw new GenderNotFoundException("Patient Gender is not found");
+            throw new GenderNotFoundException("Patient Gender is not found.");
         }
         if(patient.getDisease()==null)
         {
