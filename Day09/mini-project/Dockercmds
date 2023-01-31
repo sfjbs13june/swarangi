@@ -1,0 +1,13 @@
+docker ps     -> List docker running container
+docker ps -a
+docker rm 50f8b7e6de54 ->to remove
+docker login
+docker images
+docker rmi 247ff074cad1 -> to remove
+docker stop
+docker run -p 8080:8080 swarangikulkarni07/student-app:0.0.1-SNAPSHOT ->docker run
+docker run <repository>:<tag>
+docker pull swarangikulkarni07/student-app:0.0.1-SNAPSHOT ->for pulling
+docker network ls
+docker network inspect b6fe23088dd2
+DB-ZV1MSZ6Y-Z8H1 database id
