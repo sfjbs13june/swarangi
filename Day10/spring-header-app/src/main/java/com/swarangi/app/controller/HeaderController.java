@@ -19,7 +19,7 @@ public class HeaderController {
         if(sessionid == null){
             return  new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
-        datas.forEach(data-> System.out.println("Receved data is"+data.toString()));
+        datas.forEach(data-> System.out.println("Receved data is "+data.toString()));
         return  new ResponseEntity(HttpStatus.OK);
     }
 }
