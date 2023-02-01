@@ -16,13 +16,13 @@ docker-compose -f docker-compose-mongo.yml down
 ## Post
 
 ``` 
-curl --request POST 'http://localhost:8083/customer/create' --header 'Content-Type: application/json' --data-raw '{"name": "Rama","custId": "1re206","address": "Bangalore"}'
+curl --request POST 'http://localhost:8083/student/create' --header 'Content-Type: application/json' --data-raw '{"name": "megha","id": "212","roll": "103"}'
 ```
 
 ## Get 
 
 ``` 
-curl -X GET http://localhost:8083/customer/read 
+curl -X GET http://localhost:8083/student/read 
 ```
 
 ## Put
