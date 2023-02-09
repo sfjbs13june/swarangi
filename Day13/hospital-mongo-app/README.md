@@ -16,28 +16,14 @@ docker-compose -f docker-compose-mongo.yml down
 ## Post
 
 ``` 
-curl --request POST 'http://localhost:8083/student/create' --header 'Content-Type: application/json' --data-raw '{"name": "megha","id": "212","roll": "103"}'
+curl --request POST 'http://localhost:8083/hospital/create' --header 'Content-Type: application/json' --data-raw '{"hospitalname": "megha","address": "mumbai","contactNumber": "1234567891"}'
 ```
 
 ## Get 
 
 ``` 
-curl -X GET http://localhost:8083/student/read 
+curl -X GET http://localhost:8083/hospital/read 
 ```
-
-## Put
-
-``` 
-curl -X PUT 'http://localhost:8083/customer/update?custId=1re07&name=Rama' 
-```
-
-##Delete
-
-```
-curl -X DELETE 'http://localhost:8083/customer/delete?name=Rama' 
-```
-
-
 
 
 ## Show data

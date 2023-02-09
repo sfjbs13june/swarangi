@@ -9,6 +9,6 @@ public interface HospitalRespository extends MongoRepository<Hospital, String> {
 
 public Hospital findByName(String name);
 
-public Hospital save(Hospital student);
+public Hospital save(Hospital hospital);
 
 }
