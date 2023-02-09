@@ -17,7 +17,7 @@ public class DoctorController {
 
     Prescription pres;
     @GetMapping("/doctorappointment")
-    public List<Appointment> getAppointments(@RequestParam String doctorName){
+    public List<Appointment> getAppointments(@RequestParam ("doctorName") String doctorName){
 
 //        List listDoctors=new ArrayList();
 //        Appointment appointment1=new Appointment("101","pat1","doc1","5th feb",pres);
@@ -26,7 +26,7 @@ public class DoctorController {
 //        listDoctors.add(appointment1);
 //        listDoctors.add(appointment2);
 //        //return listDoctors;
-        return appointmentRepository.findBydoctorName(doctorName);
+        return appointmentRepository.findByDoctorName(doctorName);
 
     }
 
@@ -34,7 +34,7 @@ public class DoctorController {
     public Appointment saveAppointment(@RequestBody Appointment appointment){
 
         appointment = appointmentRepository.save(appointment);
-        System.out.println("Data Saved : " );
+        System.out.println("Data is Saved : " );
         return appointment;
 
     }

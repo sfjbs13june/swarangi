@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PrescriptionRepository extends MongoRepository<Prescription, String> {
-
+    public Prescription save(Prescription prescription);
 }
 
 
